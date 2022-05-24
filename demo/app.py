@@ -1,12 +1,12 @@
-from flask import Flask,render_template,url_for
+from flask import Flask,render_template,jsonify
 
 
 app = Flask(__name__)
 
 @app.route('/task',methods=['post','get'])
 def task():
-    # return jsonify(code=0,result="hello world")
-    return '<h1>hello world</h1>'
+    return jsonify(code=0,result="hello world")
+    # return '<h1>hello world</h1>'
 
 @app.route('/demo',methods=['get'])
 def demo():
